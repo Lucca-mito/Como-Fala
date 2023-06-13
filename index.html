@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!--
+    Author: Lucca de Mello
+
+    This is the Como Fala webpage.
+    Como Fala (Portuguese for "How do you say?") is an app to help speakers of 
+    Brazilian Portuguese, such as myself, to learn how to pronounce words in 
+    English.
+
+    This is neither a language-learning app nor a translation app. Such apps 
+    teach you what the English word is, but not how to pronounce it. This app 
+    is a complement to these apps: it assumes you know what the English word 
+    is, and shows you how to pronounce it.
+
+    This is usually done using the text-to-speech feature of, say, Google 
+    Translate. But seeing a textual description of how to pronounce a word in 
+    addition to hearing it is more helpful than just hearing it. Traditionally, 
+    this textual description is the role of the International Phonetic Alphabet 
+    (IPA). However, very few (besides linguists) are familiar with it. Even 
+    fewer have memorized the sometimes-unintuitive sounds made by every single 
+    IPA character. 
+    
+    This app is just an IPA transliterator. It fetches an IPA syllabifiction of 
+    the inputted word, then outputs a transliteration that, when read by a 
+    speaker of Brazilian Portuguese, should resemble what the word sounds like 
+    in American English. Since these two languages are very different, this 
+    transliteration is an approximation. (I tried my best.) 
+
+    This version does not include audio transcription; I'll implement that in a 
+    later version. 
+-->
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como fala?</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+            Como é que fala 
+            <input type="text" lang="en" placeholder="word in English">?
+            <button class="material-symbols-outlined" id="go">search</button>
+        </section>
+        <table id="syllabifications" lang="en"></table>
+    </main>
+    <dialog id="error-dialog">
+        <header>
+            <div>
+                <button class="material-symbols-outlined" id="close-dialog">
+                    close
+                </button>
+            </div>
+            <h1>Erro</h1>
+        </header>
+        <p id="error-message"></p>
+    </dialog>
+    <footer>
+        <cite>
+            <strong>Como Fala</strong> é possibilitado pela API
+            <a href="https://www.dictionaryapi.com/products/api-collegiate-dictionary">Merriam-Webster's Collegiate® Dictionary With Audio</a>.
+        </cite>
+        <cite lang="en">
+            <strong>Como Fala</strong> is made possible by the
+            <a href="https://www.dictionaryapi.com/products/api-collegiate-dictionary">Merriam-Webster's Collegiate® Dictionary With Audio</a> API.
+        </cite>
+    </footer>
+</body>
+</html>

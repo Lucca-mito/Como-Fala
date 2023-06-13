@@ -1,0 +1,133 @@
+/*
+ Author: Lucca de Mello
+
+ This is the stylesheet for the Como Fala web app. 
+ For a description of the app, see index.html.
+ */
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+
+    flex-direction: column;
+}
+
+main {
+    margin-top: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main section {
+    flex-wrap: nowrap;
+}
+
+main, main section {
+    max-width: 100%;
+}
+
+main, input {
+    font-size: large;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+}
+
+input, main button {
+    margin-left: .5em;
+}
+
+button {
+    background: none;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+td {
+    text-align: center;
+}
+
+tr:not(:first-child) td {
+    font-size: x-large;
+    border: 1px solid;
+    padding: 10px;
+}
+
+em {
+    font-weight: bold;
+}
+
+dialog {
+    border-color: red;
+}
+
+body, main, main section, dialog header div {
+    align-items: center;
+}
+
+dialog, button, tr {
+    border-radius: 5px;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+    width: 100%;
+
+    justify-content: space-between;
+    gap: 1em;
+
+    /* TODO: change this to `display: none`, after changing the `display` 
+     * of body to `grid`. */
+    visibility: hidden;
+}
+
+body, main, main section, dialog header div, footer {
+    display: flex;
+}
+
+cite {
+    font-size: .75em;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: cornflowerblue;
+    }
+
+    dialog {
+        background-color: black;
+        color: white;
+    }
+}
