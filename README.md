@@ -31,3 +31,15 @@ transliteration is an approximation. (I tried my best.)
 
 This version does not include audio transcription; I'll implement that in a 
 later version. 
+
+**Some words to try out:**
+- English
+- California
+- abbot
+- intonation
+- consume
+- watermelon
+- bottle
+- button
+- uh-oh
+- bon vivant
