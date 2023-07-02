@@ -6,6 +6,10 @@ Author: Lucca de Mello
 
 Instructor: Melissa Hovik
 
+[Try it out!](https://lucca-mito.github.io/Como-Fala)
+
+---
+
 **Como Fala** (Portuguese for "How do you say?") is a web app to help speakers of 
 Brazilian Portuguese, such as myself, to learn how to pronounce words in 
 English.
